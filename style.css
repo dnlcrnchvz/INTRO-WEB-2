@@ -1,3 +1,43 @@
-*{
+*{ /* slectoruniversal */
     background-color: cornflowerblue;
+    color: aliceblue;
+    font-family: "Playwrite CU", cursive;
+}
+p{/* selectore de tipo*/
+    color:purple; 
+}
+ol,
+ul{
+    color: blue;
+}
+h1{
+}
+h1:hover{
+    background-color: black;
+}
+#pp{/* selectores de id. elementos especificos. no se comprarte con otros*/
+    color: rgb(226, 43, 211);
+    font-size: 30px;
+}
+#pp::first-letter{
+    color: aliceblue;
+    padding: 40%;
+}
+.mispan{
+    color: cadetblue;
+}
+#foto-principal{
+    border-radius: 30px 10px;
+    border: 10px dotted #000;
+}
+div#section-main{
+    padding: 100px;
+    margin: 10px #000;
+    border-width: 5px 10px 15px 20px; 
+    border-style: solid dashed dotted double; 
+    border-color: red green blue brown;
+    
+}
+img{
+    height: 100px;
 }
