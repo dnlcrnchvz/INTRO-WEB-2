@@ -14,7 +14,7 @@
             <form action="" method="post"> <!-- valor de action: url a mandar la info. valor de method: es metodo http-->
                 <fieldset>
                     <legend>Datos de contacto:</legend>
-                    Nombre:<input type="text" placeholder="Daniela">
+                    Nombre:<input type="text" placeholder="Daniela" required>
                     <br>
                     Apellidos:<input type="text" placeholder="Cerón Chávez">
                     <br>
@@ -29,6 +29,35 @@
                     Numero de tamales: <input type="number" min="10" max="100" placeholder="10" required> <!-- required: campo requerido -->
                     <br>
                     Fecha de entrega: <input type="date">
+                </fieldset>
+                <fieldset>
+                    <legend>Datos del envio:</legend>
+                    <select name="" id=""><!-- El user debe hacer scroll infinito en listas largas -->
+                        <option value="" selected>Seleccionar</option>
+                        <option value="Sucursal 1">Sucursal 1</option>
+                        <option value="Sucursal 2">Sucursal 2</option>
+                        <option value="Sucursal 3">Sucursal 3</option>
+                        <option value="Sucursal 4">Sucursal 4</option>
+                        <option value="Sucursal 5">Sucursal 5</option>
+                        <option value="Sucursal 6">Sucursal 6</option>
+                        <option value="Sucursal 7">Sucursal 7</option>
+                        <option value="Sucursal 8">Sucursal 8</option>
+                    </select>
+                    <br>
+                    Elije una sucursal: <input list="datalist-sucursales" name="sucursal">
+                    <datalist id="datalist-sucursales"><!-- Buca opcion con las primeras letras -->
+                        <option value="Sucursal 1"></option>
+                        <option value="Sucursal 2"></option>
+                        <option value="Sucursal 3"></option>
+                        <option value="Sucursal 4"></option>
+                        <option value="Sucursal 5"></option>
+                        <option value="Sucursal 6"></option>
+                        <option value="Sucursal 7"></option>
+                        <option value="Sucursal 8"></option>
+                    </datalist>
+                    <br>
+                    <!-- <input type="submit"> -->
+                    <button type="submit">Enviar</button> <!-- Etiqueta semantica para un boton -->
                 </fieldset>
             </form>
         </section>
