@@ -1,0 +1,33 @@
+h1{
+    color: rgb(0, 204, 255);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+} /* valor de especificidad 001 */
+
+h1.title{
+    color: blueviolet;
+} /* valor de especificidad 011 */
+
+#titulo{
+    color: cadetblue;
+} /* valor de especificidad 100 */
+
+/* en cascada es de abajo hacia arriba */
+
+/* valores de especificidad
+tipo y pseudoelemento 1
+clase, atributo y pseudoclase 10
+id 100
+*/
+
+/* orden en css:
+0. !important -> importante
+1. la importancia
+2. especificidad
+3. orden de las fuentes: hojas de estilos, estilos en linea y embebido */
+
+/* especificidad en css:
+1. important
+2. estilos en linea
+3. id
+4. clases
+5. selectores de tipo, etiquetas */
