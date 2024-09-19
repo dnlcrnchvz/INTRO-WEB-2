@@ -14,13 +14,15 @@
             <form action="" method="post"> <!-- valor de action: url a mandar la info. valor de method: es metodo http-->
                 <fieldset>
                     <legend>Datos de contacto:</legend>
-                    Nombre:<input type="text" placeholder="Daniela" required>
+                    <!-- el id en el label y el input es el mismo y los relaciona al darle click al label resalta el input correspondiente, que es la asociación semantica de etiqueta y campo -->
+                    <label for="nombre"> Nombre:</label>
+                    <input  id="nombre" type="text" placeholder="Daniela" required>
                     <br>
-                    Apellidos:<input type="text" placeholder="Cerón Chávez">
+                    <label for="apellidos">Apellidos:<input id="apellidos" type="text" placeholder="Cerón Chávez"></label>
                     <br>
-                    Correo electronico:<input type="email" placeholder="dceronchavez@gmail.com" required> <!-- required: campo requerido -->
+                    <label for="correo">Correo electronico:<input id="correo" type="email" placeholder="dceronchavez@gmail.com" required></label> <!-- required: campo requerido -->
                     <br>
-                    Telefono:<input type="tel" placeholder="7721876599">
+                    <label for="telefono">Telefono:<input id="telefono" type="tel" placeholder="7721876599"></label>
                 </fieldset>
                 <fieldset>
                     <legend>Datos del pedido:</legend>
@@ -32,6 +34,11 @@
                 </fieldset>
                 <fieldset>
                     <legend>Datos del envio:</legend>
+                    <!-- El atributo name hace que los input esten en grupo y solo deje seleccionar uno a la vez, por lo que debe ser igual para los input necesarios -->
+                    <label for="recoger-sucursal"><input id="recoger-sucursal" type="radio" name="tipo-de-envio">Recoger en sucursal</label>
+                    <label for="recoger-delivery"><input id="recoger-delivery" type="radio" name="tipo-de-envio">Delivery</label>
+                    <label for="recoger-domicilio"><input id="recoger-domicilio" type="radio" name="tipo-de-envio">Envio a domicilio</label>
+                    <br>
                     <select name="" id=""><!-- El user debe hacer scroll infinito en listas largas -->
                         <option value="" selected>Seleccionar</option>
                         <option value="Sucursal 1">Sucursal 1</option>
@@ -55,6 +62,9 @@
                         <option value="Sucursal 7"></option>
                         <option value="Sucursal 8"></option>
                     </datalist>
+                    <br>
+                    <!-- Casilla de verificacion -->
+                    <input type="checkbox" required>Acepto terminos y condiciones
                     <br>
                     <!-- <input type="submit"> -->
                     <button type="submit">Enviar</button> <!-- Etiqueta semantica para un boton -->
