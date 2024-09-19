@@ -11,26 +11,26 @@
     </header>
     <main>
         <section>
-            <form action="" method="post"> <!-- valor de action: url a mandar la info. valor de method: es metodo http-->
+            <form action="https://formsubmit.co/dceronchavez09@gmail.com" method="post"> <!-- valor de action: url a mandar la info. valor de method: es metodo http-->
                 <fieldset>
                     <legend>Datos de contacto:</legend>
                     <!-- el id en el label y el input es el mismo y los relaciona al darle click al label resalta el input correspondiente, que es la asociación semantica de etiqueta y campo -->
                     <label for="nombre"> Nombre:</label>
-                    <input  id="nombre" type="text" placeholder="Daniela" required>
+                    <input  id="nombre" type="text" placeholder="Daniela" name="nombre" required>
                     <br>
-                    <label for="apellidos">Apellidos:<input id="apellidos" type="text" placeholder="Cerón Chávez"></label>
+                    <label for="apellidos">Apellidos:<input id="apellidos" type="text" placeholder="Cerón Chávez" name="apellidos"></label>
                     <br>
-                    <label for="correo">Correo electronico:<input id="correo" type="email" placeholder="dceronchavez@gmail.com" required></label> <!-- required: campo requerido -->
+                    <label for="correo">Correo electronico:<input id="correo" type="email" placeholder="dceronchavez@gmail.com"  name="correo" required></label> <!-- required: campo requerido -->
                     <br>
-                    <label for="telefono">Telefono:<input id="telefono" type="tel" placeholder="7721876599"></label>
+                    <label for="telefono">Telefono:<input id="telefono" type="tel" placeholder="7721876599" name="telefono"></label>
                 </fieldset>
                 <fieldset>
                     <legend>Datos del pedido:</legend>
                     <span>El número min de tamales es de 10 piezas y el max de 100 piezas</span>
                     <br>
-                    Numero de tamales: <input type="number" min="10" max="100" placeholder="10" required> <!-- required: campo requerido -->
+                    <label for="num-tamales">Numero de tamales: <input id="num-tamales" type="number" min="10" max="100" placeholder="10" name="numero-tamales" required></label> <!-- required: campo requerido -->
                     <br>
-                    Fecha de entrega: <input type="date">
+                    <label for="fec-entrega">Fecha de entrega: <input id="fec-entrega" type="date" name="fecha-entrega"></label>
                 </fieldset>
                 <fieldset>
                     <legend>Datos del envio:</legend>
@@ -39,7 +39,7 @@
                     <label for="recoger-delivery"><input id="recoger-delivery" type="radio" name="tipo-de-envio">Delivery</label>
                     <label for="recoger-domicilio"><input id="recoger-domicilio" type="radio" name="tipo-de-envio">Envio a domicilio</label>
                     <br>
-                    <select name="" id=""><!-- El user debe hacer scroll infinito en listas largas -->
+                    <select name="sucursal-select" id=""><!-- El user debe hacer scroll infinito en listas largas -->
                         <option value="" selected>Seleccionar</option>
                         <option value="Sucursal 1">Sucursal 1</option>
                         <option value="Sucursal 2">Sucursal 2</option>
@@ -51,7 +51,7 @@
                         <option value="Sucursal 8">Sucursal 8</option>
                     </select>
                     <br>
-                    Elije una sucursal: <input list="datalist-sucursales" name="sucursal">
+                    Elije una sucursal: <input list="datalist-sucursales" name="sucursal-datalist">
                     <datalist id="datalist-sucursales"><!-- Buca opcion con las primeras letras -->
                         <option value="Sucursal 1"></option>
                         <option value="Sucursal 2"></option>
@@ -64,10 +64,10 @@
                     </datalist>
                     <br>
                     <!-- Casilla de verificacion -->
-                    <input type="checkbox" required>Acepto terminos y condiciones
+                    <input type="checkbox" name="verificacion" required>Acepto terminos y condiciones
                     <br>
                     <!-- <input type="submit"> -->
-                    <button type="submit">Enviar</button> <!-- Etiqueta semantica para un boton -->
+                    <button type="submit" name="envio">Enviar</button> <!-- Etiqueta semantica para un boton -->
                 </fieldset>
             </form>
         </section>
