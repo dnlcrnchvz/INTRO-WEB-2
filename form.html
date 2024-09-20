@@ -4,27 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>¡CONTACTANOS!</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="shortcut icon" href="img/tamales.png" type="image/x-icon">
 </head>
 <body>
     <header>
-        <h1>Pedidos en este formulario</h1>
+        <nav>
+            <ul>
+                <li class="elementos-navegacion">
+                    <a href="index.html" target="_blank">Inicio</a>
+                </li>                   
+                <li class="elementos-navegacion">
+                    <a href="">Turismo</a>
+                </li>
+                <li class="elementos-navegacion">
+                    <a href="">Gastronomia</a>
+                </li>
+            </ul>
+        </nav>
     </header>
     <main>
         <section>
+            <h1>Pedidos en este formulario</h1>
             <form action="https://formsubmit.co/dceronchavez09@gmail.com" method="post"> <!-- valor de action: url a mandar la info. valor de method: es metodo http-->
-                <fieldset>
+                <fieldset id="datos-contacto">
                     <legend>Datos de contacto:</legend>
                     <!-- el id en el label y el input es el mismo y los relaciona al darle click al label resalta el input correspondiente, que es la asociación semantica de etiqueta y campo -->
-                    <label for="nombre"> Nombre:</label>
-                    <input  id="nombre" type="text" placeholder="Daniela" name="nombre" required>
-                    <br>
+                    <label for="nombre"> Nombre:<input  id="nombre" type="text" placeholder="Daniela" name="nombre" required></label>
                     <label for="apellidos">Apellidos:<input id="apellidos" type="text" placeholder="Cerón Chávez" name="apellidos"></label>
-                    <br>
                     <label for="correo">Correo electronico:<input id="correo" type="email" placeholder="dceronchavez@gmail.com"  name="correo" required></label> <!-- required: campo requerido -->
-                    <br>
                     <label for="telefono">Telefono:<input id="telefono" type="tel" placeholder="7721876599" name="telefono"></label>
                 </fieldset>
-                <fieldset>
+                <fieldset id="datos-pedido">
                     <legend>Datos del pedido:</legend>
                     <span>El número min de tamales es de 10 piezas y el max de 100 piezas</span>
                     <br>
@@ -32,7 +43,7 @@
                     <br>
                     <label for="fec-entrega">Fecha de entrega: <input id="fec-entrega" type="date" name="fecha-entrega"></label>
                 </fieldset>
-                <fieldset>
+                <fieldset id="datos-envio">
                     <legend>Datos del envio:</legend>
                     <!-- El atributo name hace que los input esten en grupo y solo deje seleccionar uno a la vez, por lo que debe ser igual para los input necesarios -->
                     <label for="recoger-sucursal"><input id="recoger-sucursal" type="radio" name="tipo-de-envio">Recoger en sucursal</label>
