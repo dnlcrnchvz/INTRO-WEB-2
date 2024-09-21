@@ -3,14 +3,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color:
 }
 /* declara variables para reutilizar colores */
 :root{  /* es una pseudoclase por eso los dos puntos */
     --color_texto: cornflowerblue;
-    --color_elementos_fieldset: #581845 ;
-    --color_button: rgb(77, 253, 195);
-    --color_hover: rgb(252, 153, 250);
+    --color_nav_hover: rgb(45, 0, 248);
+    --color_texto_h1: rgb(191, 59, 235);
+    --color_fielset: rgb(84, 221, 94);
+    --color_elementos_fieldset: rgb(101, 101, 101) ;
+    --color_letter_fielset: rgb(180, 167, 246);
+    --color_input: rgb(238, 189, 168);
+    --color_input_text_focus: rgb(236, 151, 115);  
+    --color_sucursal-select: rgb(247, 239, 0); 
+    --color_button: rgb(77, 180, 253);
+
 }
 /* sintaxis para establecer variables con fuentes y unidades de medida */
 /* :root {
@@ -42,24 +48,25 @@ nav>ul{/* seleccionar el elemento nav madre y su hija lista */
     color: var(--color_texto);
 }
 .elementos-navegacion a:hover{ /* Uso de pseudoclase en los enlaces de la navegación */
-    color: var(--color_hover);
+    color: var(--color_nav_hover);
     text-decoration: double;
 }
 h1{
-    color: var(--color_button);
+    color: var(--color_texto_h1);
     text-align: center;
+    font-family: monospace;
 }
 form{
     width: 70%; /* ancho de un elemento */
     max-width: 880px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 400;
+    font-family: monospace;
     font-style: normal;
     text-align: center;
     margin: 0 auto;
 }
 fieldset{
-    border-color: khaki;
+    border: 5px solid var(--color_fielset);
     border-radius: 1.2em;
     color: var(--color_elementos_fieldset);
     margin: 20px;
@@ -68,7 +75,7 @@ legend{
     text-align: left;
 }
 legend::first-letter{ /* seudoelemento */
-    color: aquamarine;
+    color: var(--color_letter_fielset);
 }
 #datos-pedido,
 #datos-envio{
@@ -82,24 +89,23 @@ legend::first-letter{ /* seudoelemento */
 #datos-contacto input,
 #datos-pedido input,
 #datos-envio input{
-    border: 3px solid rgb(142, 37, 207);  /* o puede ser una vardel root */
+    border: 3px solid var(--color_input);  /* o puede ser una vardel root */
     width: 200px;
 }
 /* estilos a campos de entrada (inputs) cuando esten en foco*/
 /* focus pseudoclase se activa con una acción sobre el elemento */
 input[type="text"]:focus{ 
-    box-shadow: 10px 3px var(--color_button); /* sombra */
-    background-color: var(--color_button); /* fondo */
+    box-shadow: 10px 3px var(--color_input_text_focus); /* sombra */
+    /*background-color: var(--color_button);  fondo */
 }
-#datos-pedido select[name="sucursal-select"]{ /* selecciona los atributos [] */
+#datos-envio select[name="sucursal-select"]{ /* selecciona los atributos [] */
     width: 200px;
-    border: 2px solid var(--color_elementos_fieldset);
+    border: 1px solid var(--color_sucursal-select);
 }
 button[type="submit"]{
-    color: var(--color_button);
-    background-color: rgb(177, 128, 222);
+    border: 5px solid var(--color_button);
+    /* background-color: rgb(141, 141, 141); */
     float: right;
-
 }
 button:active{
     transform: scale(0.90);
